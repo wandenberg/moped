@@ -557,6 +557,7 @@ module Moped
     #
     # @since 2.0.0
     def configure(settings)
+      Loggable.warn("  MOPED:", "Getting configuration for node #{self}, configuration: #{settings}.", "n/a")
       @arbiter = settings["arbiterOnly"]
       @passive = settings["passive"]
       @primary = settings["ismaster"]
